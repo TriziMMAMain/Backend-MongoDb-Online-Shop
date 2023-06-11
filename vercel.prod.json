@@ -12,5 +12,8 @@
       "src": "/(.*)",
       "dest": "http://localhost:3000"
     }
-  ]
+  ],
+  "env": {
+    "MONGODB_URI": "mongodb+srv://vercel-admin-user:OPZiNXTyFERRCBWV@mongodbonlineshopvseins.r6glwty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/instrumentBox/"
+  }
 }
