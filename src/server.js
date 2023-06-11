@@ -16,9 +16,7 @@ app.use(bodyParser.json())
 app.use(instrumentRouter)
 
 
-app.listen(PORT, (err) => {
-    err ? console.log(err) : console.log(`listening port ${PORT}`)
-})
+
 
 mongoose
     .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 3000,})
@@ -29,4 +27,6 @@ mongoose
         console.log(`Db connection error ${err}`)
     })
 
-
+app.listen(PORT, (err) => {
+    err ? console.log(err) : console.log(`listening port ${PORT}`)
+})
