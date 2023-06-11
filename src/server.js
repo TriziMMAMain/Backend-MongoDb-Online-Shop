@@ -19,7 +19,7 @@ app.listen(PORT, (err) => {
 })
 
 mongoose
-    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true})
+    .connect("process.env.MONGODB_URI", { useNewUrlParser: true, useUnifiedTopology: true})
     .then((res) => {
         console.log(`Connected to MongoDB`)
     })
