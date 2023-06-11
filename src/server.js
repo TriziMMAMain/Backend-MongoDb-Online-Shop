@@ -21,7 +21,7 @@ app.listen(PORT, (err) => {
 })
 
 mongoose
-    .connect(url2, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 3000,})
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 3000,})
     .then((res) => {
         console.log(`Connected to MongoDB`)
     })
