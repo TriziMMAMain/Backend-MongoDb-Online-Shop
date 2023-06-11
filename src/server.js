@@ -21,7 +21,7 @@ app.use(instrumentRouter)
 mongoose
     .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 3000,})
     .then((res) => {
-        console.log(`Connected to MongoDB`)
+        console.log(`Connected to MongoDB ${res}`)
     })
     .catch((err) => {
         console.log(`Db connection error ${err}`)
