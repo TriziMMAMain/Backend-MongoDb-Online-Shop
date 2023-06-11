@@ -6,7 +6,9 @@ const instrumentRouter = require('./routes/instrument-routes.js')
 
 
 const PORT = 3000
-// const URL = 'mongodb+srv://Rustam:rusqtam01q1@mongodbonlineshopvseins.r6glwty.mongodb.net/instrumentBox'
+const URL = 'mongodb+srv://Rustam:rusqtam01q1@mongodbonlineshopvseins.r6glwty.mongodb.net/instrumentBox'
+const url2 = "mongodb+srv://vercel_backend:porkold@mongodbonlineshopvseins.r6glwty.mongodb.net/instrumentBox"
+
 
 const app = express()
 app.use(cors())
@@ -19,7 +21,7 @@ app.listen(PORT, (err) => {
 })
 
 mongoose
-    .connect("process.env.MONGODB_URI", { useNewUrlParser: true, useUnifiedTopology: true})
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true})
     .then((res) => {
         console.log(`Connected to MongoDB`)
     })
