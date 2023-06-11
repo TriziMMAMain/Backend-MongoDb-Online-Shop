@@ -9,4 +9,3 @@ file_to_ignore.txt
 
 # игнорирование всех файлов с расширением .swp
 *.swp
-.vercel
