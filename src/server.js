@@ -16,8 +16,6 @@ app.use(bodyParser.json())
 app.use(instrumentRouter)
 
 
-console.log("let's go")
-
 mongoose
     .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true,})
     .then((res) => {

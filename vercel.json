@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "framework": "node",
   "name": "backend-mongo-db-online-shop",
   "builds": [
     {
