@@ -14,6 +14,7 @@
     }
   ],
   "env": {
-    "MONGODB_URI": "mongodb+srv://vercel-admin-user:OPZiNXTyFERRCBWV@mongodbonlineshopvseins.r6glwty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/instrumentBox/"
+    "MONGODB_URI": "mongodb+srv://vercel-admin-user:OPZiNXTyFERRCBWV@mongodbonlineshopvseins.r6glwty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/instrumentBox/",
+    "PORT": 3000
   }
 }
