@@ -19,7 +19,7 @@ app.use(instrumentRouter)
 
 
 mongoose
-    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 3000,})
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true,})
     .then((res) => {
         console.log(`Connected to MongoDB ${res}`)
     })
