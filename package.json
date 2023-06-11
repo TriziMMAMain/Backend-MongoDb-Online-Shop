@@ -2,13 +2,12 @@
   "name": "mongo-db-instrument-api",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.js",
+  "main": "./src/server.js",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
-    "start": "node src/server.js",
-    "vercel-build": "node src/server.js"
+    "start": "node ./src/server.js"
   },
   "author": "",
   "license": "ISC",

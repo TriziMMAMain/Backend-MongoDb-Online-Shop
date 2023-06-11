@@ -3,14 +3,14 @@
   "name": "backend-mongo-db-online-shop",
   "builds": [
     {
-      "src": "src/server.js",
+      "src": "./src/server.js",
       "use": "@vercel/node"
-    }
+      }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/server.js"
+      "dest": "/"
     }
   ]
 }
