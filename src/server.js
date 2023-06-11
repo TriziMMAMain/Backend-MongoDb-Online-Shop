@@ -5,7 +5,7 @@ const cors = require('cors')
 const instrumentRouter = require('./routes/instrument-routes.js')
 
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000;
 const URL = 'mongodb+srv://Rustam:rusqtam01q1@mongodbonlineshopvseins.r6glwty.mongodb.net/instrumentBox'
 const url2 = "mongodb+srv://vercel_backend:porkold@mongodbonlineshopvseins.r6glwty.mongodb.net/instrumentBox"
 
