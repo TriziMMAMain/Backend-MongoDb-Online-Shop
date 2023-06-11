@@ -1,10 +1,17 @@
 {
   "version": 2,
+  "framework": "node",
   "name": "backend-mongo-db-online-shop",
   "builds": [
-    { "src": "src/server.js", "use": "@vercel/node" }
+    {
+      "src": "src/server.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "src/routes/instrument-routes.js" }
+    {
+      "src": "/(.*)",
+      "dest": "src/server.js"
+    }
   ]
 }
