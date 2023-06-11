@@ -3,17 +3,14 @@
   "name": "backend-mongo-db-online-shop",
   "builds": [
     {
-      "src": "./src/server.js",
+      "src": "package.json",
       "use": "@vercel/node"
-      }
+    }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "http://localhost:3000"
     }
-  ],
-  "env": {
-    "NPM_RUN_SCRIPT": "start"
-  }
+  ]
 }
