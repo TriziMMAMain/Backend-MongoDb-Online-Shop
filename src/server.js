@@ -28,4 +28,3 @@ mongoose
 app.listen(PORT, (err) => {
     err ? console.log(err) : console.log(`listening port ${PORT}`)
 })
-console.log(`Let's go`)
