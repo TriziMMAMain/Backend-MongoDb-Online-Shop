@@ -22,12 +22,13 @@ app.listen(PORT, (err) => {
         mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true
-        }).then(() => {
-            console.log("MongoDB connected");
-        }).catch((err) => {
-            console.error("MongoDB connection error: ", err);
-        });
-
+        }, function(err) {
+            if (err) {
+                console.log('Error connecting to MongoDB:', err);
+            } else {
+                console.log('Successfully connected to MongoDB');
+            }
+        })
     } else {
         console.log(err)
     }
