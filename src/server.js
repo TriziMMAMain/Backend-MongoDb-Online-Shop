@@ -16,14 +16,20 @@ app.use(bodyParser.json())
 app.use(instrumentRouter)
 
 
-mongoose.connect(url2, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log(`Connected to MongoDB`,)
-    })
-    .catch((err) => {
-        console.log(`Db connection error ${err}`)
-    })
+
 
 app.listen(PORT, (err) => {
-    err ? console.log(err) : console.log(`listening port ${PORT}`)
+    if (!err) {
+        console.log(err)
+    } else {
+        console.log(`listening port ${PORT}`)
+        mongoose.connect(url2, { useNewUrlParser: true, useUnifiedTopology: true })
+            .then(() => {
+                console.log(`Connected to MongoDB`,)
+            })
+            .catch((err) => {
+                console.log(`Db connection error ${err}`)
+            })
+    }
+
 })
