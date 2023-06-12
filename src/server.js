@@ -16,20 +16,21 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(instrumentRouter)
 
-app.listen(PORT, (err) => {
-    if (!err) {
-        console.log(`listening port ${PORT}`)
-        mongoose.connect(process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        }, function(err) {
-            if (err) {
-                console.log('Error connecting to MongoDB:', err);
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(() => {
+        console.log("MongoDB connected")
+        app.listen(PORT, (err) => {
+            if (!err) {
+                console.log(`listening port ${PORT}`)
             } else {
-                console.log('Successfully connected to MongoDB');
+                console.log(err)
             }
         })
-    } else {
-        console.log(err)
-    }
-})
+    })
+    .catch((err) => {
+        console.error("MongoDB connection error: ", err)
+    })
+
