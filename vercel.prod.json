@@ -4,7 +4,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "vercel-build"
+      "use": "@vercel/node"
     }
   ],
   "routes": [

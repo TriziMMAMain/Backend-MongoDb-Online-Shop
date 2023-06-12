@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
-require('dotenv').config();
 const cors = require('cors')
 const instrumentRouter = require('./routes/instrument-routes.js')
 
@@ -21,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true
 })
     .then((res) => {
-        console.log("MongoDB connected ", res)
+        console.log("MongoDB connected ")
         app.listen(PORT, (err) => {
             if (!err) {
                 console.log(`listening port ${PORT}`)
