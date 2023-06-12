@@ -20,8 +20,8 @@ mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    .then(() => {
-        console.log("MongoDB connected")
+    .then((res) => {
+        console.log("MongoDB connected ", res)
         app.listen(PORT, (err) => {
             if (!err) {
                 console.log(`listening port ${PORT}`)
