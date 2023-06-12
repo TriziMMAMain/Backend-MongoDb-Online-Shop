@@ -21,15 +21,15 @@ app.use(instrumentRouter)
 app.listen(PORT, (err) => {
     if (!err) {
         console.log(`listening port ${PORT}`)
-        mongoose.connect(url2, { useNewUrlParser: true, useUnifiedTopology: true })
+        mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
             .then(() => {
                 console.log(`Connected to MongoDB`,)
             })
             .catch((err) => {
                 console.log(`Db connection error ${err}`)
             })
+
     } else {
         console.log(err)
     }
-
 })
