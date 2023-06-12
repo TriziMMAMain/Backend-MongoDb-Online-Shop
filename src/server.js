@@ -20,8 +20,6 @@ app.use(instrumentRouter)
 
 app.listen(PORT, (err) => {
     if (!err) {
-        console.log(err)
-    } else {
         console.log(`listening port ${PORT}`)
         mongoose.connect(url2, { useNewUrlParser: true, useUnifiedTopology: true })
             .then(() => {
@@ -30,6 +28,8 @@ app.listen(PORT, (err) => {
             .catch((err) => {
                 console.log(`Db connection error ${err}`)
             })
+    } else {
+        console.log(err)
     }
 
 })
