@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
+require('dotenv').config();
 const cors = require('cors')
 const instrumentRouter = require('./routes/instrument-routes.js')
 
@@ -15,19 +16,17 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(instrumentRouter)
 
-
-
-
 app.listen(PORT, (err) => {
     if (!err) {
         console.log(`listening port ${PORT}`)
-        mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-            .then(() => {
-                console.log(`Connected to MongoDB`,)
+        mongoose
+            .connect(process.env.MONGODB_URI, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                useCreateIndex: true,
             })
-            .catch((err) => {
-                console.log(`Db connection error ${err}`)
-            })
+            .then(() => console.log("MongoDB connection successful"))
+            .catch((err) => console.error("MongoDB connection error: ", err));
 
     } else {
         console.log(err)
