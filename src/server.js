@@ -14,7 +14,6 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 app.use(instrumentRouter)
-app.use(instrumentController)
 
 
 app.listen(PORT, (err) => {
