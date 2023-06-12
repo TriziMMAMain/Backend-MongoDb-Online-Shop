@@ -19,7 +19,7 @@ app.use(instrumentRouter)
 app.listen(PORT, (err) => {
     if (!err) {
         console.log(`listening port ${PORT}`)
-        mongoose.connect(MONGODB_URI, {
+        mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             createIndexes: true
