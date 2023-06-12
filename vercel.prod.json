@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "http://localhost:3000"
+      "dest": "https://backend-mongo-db-online-shop.vercel.app/"
     }
   ],
   "env": {
