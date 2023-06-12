@@ -22,7 +22,7 @@ app.listen(PORT, (err) => {
         mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            createIndexes: true
+            createIndexe: true
         }).then(() => {
             console.log("MongoDB connected");
         }).catch((err) => {
