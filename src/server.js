@@ -19,14 +19,15 @@ app.use(instrumentRouter)
 app.listen(PORT, (err) => {
     if (!err) {
         console.log(`listening port ${PORT}`)
-        mongoose
-            .connect(process.env.MONGODB_URI, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                useCreateIndex: true,
-            })
-            .then(() => console.log("MongoDB connection successful"))
-            .catch((err) => console.error("MongoDB connection error: ", err));
+        mongoose.connect(MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            createIndexes: true
+        }).then(() => {
+            console.log("MongoDB connected");
+        }).catch((err) => {
+            console.error("MongoDB connection error: ", err);
+        });
 
     } else {
         console.log(err)
