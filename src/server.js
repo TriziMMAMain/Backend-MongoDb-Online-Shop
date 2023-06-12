@@ -24,7 +24,7 @@ app.listen(PORT, (err) => {
     }
 })
 
-mongoose.connect(process.env.MONGODB_URI_SECOND, {
+mongoose.connect(process.env.MONGODB_RENDER, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
