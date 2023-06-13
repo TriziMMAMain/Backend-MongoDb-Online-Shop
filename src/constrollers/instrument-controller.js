@@ -140,6 +140,7 @@ const updateInstrumentById = (req, res) => {
 }
 const updateUsersById = (req, res) => {
     const data = req.body
+    console.log(data);
     User
         .findByIdAndUpdate(req.params.id, data)
         .then((result) => {
