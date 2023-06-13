@@ -138,7 +138,17 @@ const updateInstrumentById = (req, res) => {
         })
         .catch((err) => handlerError(res, err))
 }
-
+const updateUsersById = (req, res) => {
+    const data = req.body
+    User
+        .findByIdAndUpdate(req.params.id, data)
+        .then((result) => {
+            res
+                .status(200)
+                .json(result)
+        })
+        .catch((err) => handlerError(res, err))
+}
 
 
 // Exports
@@ -163,5 +173,6 @@ module.exports = {
 
     // Update
     updateInstrumentById,
+    updateUsersById
 
 }

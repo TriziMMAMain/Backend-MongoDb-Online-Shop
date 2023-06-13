@@ -22,6 +22,7 @@ const {
 
     // Update
     updateInstrumentById,
+    updateUsersById
 
 } = require('../constrollers/instrument-controller.js')
 const fs = require("fs");
@@ -47,6 +48,6 @@ router.post('/api/user/add', postUser);
 
 // Patch
 router.patch('/instrument/update/:id', updateInstrumentById)
-
+router.patch('/users/update/:id', updateUsersById)
 
 module.exports = router
