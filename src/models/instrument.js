@@ -10,23 +10,23 @@ const instrumentSchema = new Schema({
 
     numberInList: {
         type: Number,
-        required: true
+        required: false
     },
     type: {
         type: String,
-        required: true
+        required: false
     },
     typeThis: {
         type: String,
-        required: true
+        required: false
     },
     brand: {
         type: String,
-        required: true
+        required: false
     },
     name: {
         type: String,
-        required: true
+        required: false
     },
     city: {
         type: String,
@@ -34,53 +34,53 @@ const instrumentSchema = new Schema({
     },
     featureTop: {
         type: String,
-        required: true
+        required: false
     },
     featureTopTitle: {
         type: [{
             featureTopTitleInfoTitle: String,
             featureTopTitleInfoText: String
         }],
-        required: true
+        required: false
     },
     featureMiddle: {
         type: [{
             feature: String,
             featureValue: String
         }],
-        required: true
+        required: false
     },
     featureDownArray: {
         type: [{
             featureDown: String
         }],
-        required: true
+        required: false
     },
     availability: {
         type: Number,
-        required: true
+        required: false
     },
     imgTitle: {
         type: String,
-        required: true
+        required: false
     },
     imgArray: {
         type: [{
             src: String
         }],
-        required: true
+        required: false
     },
     price: {
         type: Number,
-        required: true
+        required: false
     },
     orderSum: {
         type: Number,
-        required: true
+        required: false
     },
     priceOrder: {
         type: Number,
-        required: true
+        required: false
     }
 })
 

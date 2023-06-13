@@ -39,15 +39,19 @@ router.get('/api/instruments/get/network', getInstrumentTypeNetwork)
 router.get('/api/instruments/get/pneumo', getInstrumentTypePneumotool)
 router.get('/api/instrument/:id', getInstrumentId)
 
-// users Get
+// Get users
 router.get('/api/users/get/all', getUsers)
 
 // Post
 router.post('/instrument/add', postInstrument)
+
+// Post user
 router.post('/api/user/add', postUser);
+
 
 // Patch
 router.patch('/instrument/update/:id', updateInstrumentById)
+// Ptach user
 router.patch('/users/update/:id', updateUsersById)
 
 module.exports = router
