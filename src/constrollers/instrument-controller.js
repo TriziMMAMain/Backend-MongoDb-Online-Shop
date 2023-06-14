@@ -83,10 +83,10 @@ const getInstrumentTypePneumotool = (req, res) => {
 
 // Get admin-panel
 const getAdminAndPassword = (req, res) => {
-    const loginRustam = 'rustam'
-    const loginStas = 'stas'
-    const passwordRustam = '123456'
-    const passwordStas = '123456'
+    const loginRustam = 'Rus1@TaMMMa12'
+    const loginStas = 'StA@SMmMa12421'
+    const passwordRustam = 'RusQtam01q1'
+    const passwordStas = 'stAsELantra23'
 
     return res
         .status(200)
