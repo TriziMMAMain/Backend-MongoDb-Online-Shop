@@ -10,6 +10,9 @@ const {
     getInstrumentTypeNetwork,
     getInstrumentTypePneumotool,
 
+    // Get admin-panel
+    getAdminAndPassword,
+
     // users
     getUsers,
 
@@ -38,6 +41,9 @@ router.get('/api/instruments/get/gasoline', getInstrumentTypeGasoline)
 router.get('/api/instruments/get/network', getInstrumentTypeNetwork)
 router.get('/api/instruments/get/pneumo', getInstrumentTypePneumotool)
 router.get('/api/instrument/:id', getInstrumentId)
+
+// Get login and password
+router.get('/api/admin-panel-get', getAdminAndPassword)
 
 // Get users
 router.get('/api/users/get/all', getUsers)

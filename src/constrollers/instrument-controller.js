@@ -81,6 +81,21 @@ const getInstrumentTypePneumotool = (req, res) => {
         .catch((err) => handlerError(res, err))
 }
 
+// Get admin-panel
+const getAdminAndPassword = (req, res) => {
+    const loginRustam = 'rustam'
+    const loginStas = 'stas'
+    const passwordRustam = '123456'
+    const passwordStas = '123456'
+
+        .then(() => {
+            res
+                .status(200)
+                .json(loginRustam, loginStas, passwordRustam, passwordStas)
+        })
+        .catch((err) => handlerError(res, err))
+}
+
 // users
 const getUsers = (req, res) => {
     User
@@ -163,8 +178,12 @@ module.exports = {
     getInstrumentTypeNetwork,
     getInstrumentTypePneumotool,
 
+    // Get admin-panel
+    getAdminAndPassword,
+
     // users
     getUsers,
+
 
     // Post
     postInstrument,
