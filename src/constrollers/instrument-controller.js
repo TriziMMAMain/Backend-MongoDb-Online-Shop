@@ -91,7 +91,6 @@ const getAdminAndPassword = (req, res) => {
     return res
         .status(200)
         .json({ loginRustam, loginStas, passwordRustam, passwordStas })
-        .catch((err) => handlerError(res, err))
 }
 
 // users
