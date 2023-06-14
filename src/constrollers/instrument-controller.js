@@ -88,11 +88,9 @@ const getAdminAndPassword = (req, res) => {
     const passwordRustam = '123456'
     const passwordStas = '123456'
 
-        .then(() => {
-            res
-                .status(200)
-                .json(loginRustam, loginStas, passwordRustam, passwordStas)
-        })
+    return res
+        .status(200)
+        .json({ loginRustam, loginStas, passwordRustam, passwordStas })
         .catch((err) => handlerError(res, err))
 }
 
