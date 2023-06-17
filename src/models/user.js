@@ -101,6 +101,14 @@ const userSchema = new Schema({
         type: String,
         required: false
     },
+    dateClick: {
+        type: String,
+        required: false
+    },
+    timeClick: {
+        type: String,
+        required: false
+    }
 }, { versionKey: false })
 
 const User = mongoose.model('User', userSchema)
