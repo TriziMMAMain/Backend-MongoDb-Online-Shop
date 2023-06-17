@@ -54,7 +54,7 @@ router.post('/instrument/add', postInstrument)
 // Post user
 router.post('/api/user/add', postUser);
 // Post and Get user
-router.post('api/user/getPost', postGetUser)
+router.post('api/user/getPost/:id', postGetUser)
 
 // Patch
 router.patch('/instrument/update/:id', updateInstrumentById)
