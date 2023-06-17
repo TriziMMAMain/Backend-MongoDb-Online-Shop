@@ -15,7 +15,7 @@ const {
 
     // users
     getUsers,
-
+    postGetUser,
 
     // Post
     postInstrument,
@@ -53,7 +53,8 @@ router.post('/instrument/add', postInstrument)
 
 // Post user
 router.post('/api/user/add', postUser);
-
+// Post and Get user
+router.post('api/user/getPost', postGetUser)
 
 // Patch
 router.patch('/instrument/update/:id', updateInstrumentById)

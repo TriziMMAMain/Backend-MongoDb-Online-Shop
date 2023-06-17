@@ -137,6 +137,16 @@ const postUser = (req, res) => {
         })
         .catch((err) => handlerError(res, err))
 }
+const postGetUser = (req, res) => {
+    User
+        .find({ newId: req.body })
+        .then((user) => {
+            res
+                .status(200)
+                .json(user)
+        })
+        .catch((err) => handlerError(res, err))
+}
 
 // Update
 const updateInstrumentById = (req, res) => {
@@ -180,7 +190,7 @@ module.exports = {
 
     // users
     getUsers,
-
+    postGetUser,
 
     // Post
     postInstrument,
