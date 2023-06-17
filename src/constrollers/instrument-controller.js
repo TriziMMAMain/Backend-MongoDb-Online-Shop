@@ -105,16 +105,7 @@ const getUsers = (req, res) => {
         })
         .catch((err) => handlerError(res, err))
 }
-const getUser = (req, res) => {
-    User
-        .find({ newId: req.params.id })
-        .then((user) => {
-            res
-                .status(200)
-                .json(user)
-        })
-        .catch((err) => handlerError(res, err))
-}
+
 
 // Post
 
@@ -190,7 +181,6 @@ module.exports = {
 
     // users
     getUsers,
-    getUser,
 
     // Post
     postInstrument,

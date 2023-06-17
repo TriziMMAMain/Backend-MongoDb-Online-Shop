@@ -15,7 +15,6 @@ const {
 
     // users
     getUsers,
-    getUser,
 
     // Post
     postInstrument,
@@ -47,7 +46,6 @@ router.get('/api/admin-panel-get', getAdminAndPassword)
 
 // Get users
 router.get('/api/users/get/all', getUsers)
-router.get('/api/user/get/id/:id', getUser)
 
 // Post
 router.post('/instrument/add', postInstrument)
