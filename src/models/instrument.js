@@ -82,7 +82,7 @@ const instrumentSchema = new Schema({
         type: Number,
         required: false
     }
-})
+}, { versionKey: false })
 
 const Instrument = mongoose.model('Instrument', instrumentSchema)
 

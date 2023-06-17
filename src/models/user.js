@@ -97,7 +97,7 @@ const userSchema = new Schema({
         type: String,
         required: false
     },
-})
+}, { versionKey: false })
 
 const User = mongoose.model('User', userSchema)
 
