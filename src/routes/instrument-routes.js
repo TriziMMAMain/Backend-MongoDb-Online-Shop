@@ -15,7 +15,7 @@ const {
 
     // users
     getUsers,
-    postGetUser,
+    getUser,
 
     // Post
     postInstrument,
@@ -47,6 +47,7 @@ router.get('/api/admin-panel-get', getAdminAndPassword)
 
 // Get users
 router.get('/api/users/get/all', getUsers)
+router.get('/api/user/get/id/:id', getUser)
 
 // Post
 router.post('/instrument/add', postInstrument)
@@ -54,7 +55,6 @@ router.post('/instrument/add', postInstrument)
 // Post user
 router.post('/api/user/add', postUser);
 // Post and Get user
-router.post('/api/user/getPost/:id', postGetUser)
 
 // Patch
 router.patch('/instrument/update/:id', updateInstrumentById)

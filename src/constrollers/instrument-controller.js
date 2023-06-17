@@ -105,6 +105,16 @@ const getUsers = (req, res) => {
         })
         .catch((err) => handlerError(res, err))
 }
+const getUser = (req, res) => {
+    User
+        .find({ newId: req.params.id })
+        .then((user) => {
+            res
+                .status(200)
+                .json(user)
+        })
+        .catch((err) => handlerError(res, err))
+}
 
 // Post
 
@@ -134,16 +144,6 @@ const postUser = (req, res) => {
             res
                 .status(201)
                 .json(result)
-        })
-        .catch((err) => handlerError(res, err))
-}
-const postGetUser = (req, res) => {
-    User
-        .find({ newId: req.body })
-        .then((user) => {
-            res
-                .status(200)
-                .json(user)
         })
         .catch((err) => handlerError(res, err))
 }
@@ -190,7 +190,7 @@ module.exports = {
 
     // users
     getUsers,
-    postGetUser,
+    getUser,
 
     // Post
     postInstrument,
