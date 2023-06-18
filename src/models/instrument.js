@@ -60,6 +60,10 @@ const instrumentSchema = new Schema({
         type: Number,
         required: false
     },
+    availabilitySecond: {
+        type: Boolean,
+        required: false
+    },
     imgTitle: {
         type: String,
         required: false
