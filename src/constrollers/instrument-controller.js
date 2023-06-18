@@ -97,7 +97,6 @@ const getAdminAndPassword = (req, res) => {
 const getUsers = (req, res) => {
     User
         .find()
-        .sort({name: 1})
         .then((users) => {
             res
                 .status(200)
