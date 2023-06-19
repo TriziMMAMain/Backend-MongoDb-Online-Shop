@@ -5,60 +5,60 @@ const Schema = mongoose.Schema
 const instrumentSchema = new Schema({
     id: {
         type: Number,
-        required: true
+        required: false
     },
 
     numberInList: {
         type: Number,
-        required: true
+        required: false
     },
     type: {
         type: String,
-        required: true
+        required: false
     },
     typeThis: {
         type: String,
-        required: true
+        required: false
     },
     brand: {
         type: String,
-        required: true
+        required: false
     },
     name: {
         type: String,
-        required: true
+        required: false
     },
     city: {
         type: String,
-        required: true
+        required: false
     },
     featureTop: {
         type: String,
-        required: true
+        required: false
     },
     featureTopTitle: {
         type: [{
             featureTopTitleInfoTitle: String,
             featureTopTitleInfoText: String
         }],
-        required: true
+        required: false
     },
     featureMiddle: {
         type: [{
             feature: String,
             featureValue: String
         }],
-        required: true
+        required: false
     },
     featureDownArray: {
         type: [{
             featureDown: String
         }],
-        required: true
+        required: false
     },
     availability: {
         type: String,
-        required: true
+        required: false
     },
     avalibilitySecond: {
         type: Boolean,
@@ -66,25 +66,25 @@ const instrumentSchema = new Schema({
     },
     imgTitle: {
         type: String,
-        required: true
+        required: false
     },
     imgArray: {
         type: [{
             src: String
         }],
-        required: true
+        required: false
     },
     price: {
         type: Number,
-        required: true
+        required: false
     },
     orderSum: {
         type: Number,
-        required: true
+        required: false
     },
     priceOrder: {
         type: Number,
-        required: true
+        required: false
     }
 }, { versionKey: false })
 
