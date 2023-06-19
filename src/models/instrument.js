@@ -3,71 +3,88 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const instrumentSchema = new Schema({
-    "id": {
+    id: {
         type: Number,
+        required: false
     },
 
-    "numberInList": {
+    numberInList: {
         type: Number,
+        required: false
     },
-    "type": {
+    type: {
         type: String,
+        required: false
     },
-    "typeThis": {
+    typeThis: {
         type: String,
+        required: false
     },
-    "brand": {
+    brand: {
         type: String,
+        required: false
     },
-    "name": {
+    name: {
         type: String,
+        required: false
     },
-    "city": {
+    city: {
         type: String,
+        required: false
     },
-    "featureTop": {
+    featureTop: {
         type: String,
+        required: false
     },
-    "featureTopTitle": {
+    featureTopTitle: {
         type: [{
             featureTopTitleInfoTitle: String,
             featureTopTitleInfoText: String
         }],
+        required: false
     },
-    "featureMiddle": {
+    featureMiddle: {
         type: [{
             feature: String,
             featureValue: String
         }],
+        required: false
     },
-    "featureDownArray": {
+    featureDownArray: {
         type: [{
             featureDown: String
         }],
+        required: false
     },
-    "availability": {
+    availability: {
         type: String,
+        required: false
     },
-    "avalibilitySecond": {
+    avalibilitySecond: {
         type: Boolean,
         default: true
     },
-    "imgTitle": {
+    imgTitle: {
         type: String,
+        required: false
     },
-    "imgArray": {
+    imgArray: {
         type: [{
             src: String
         }],
+        required: false
     },
-    "price": {
+    price: {
         type: Number,
+        required: false
     },
-    "orderSum": {
+    orderSum: {
         type: Number,
+        required: false
     },
-    "priceOrder": {
+    priceOrder: {
         type: Number,
+        required: false
     }
 }, { versionKey: false })
 
