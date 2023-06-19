@@ -71,7 +71,7 @@ const userSchema = new Schema({
                 }]
             },
             availability: {
-                type: Number
+                type: String
             },
             avalibilitySecond: {
                 type: Boolean,
