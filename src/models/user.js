@@ -74,8 +74,7 @@ const userSchema = new Schema({
                 type: Number
             },
             avalibilitySecond: {
-                type: Boolean,
-                default: false
+                type: Boolean
             },
             imgTitle: {
                 type: String

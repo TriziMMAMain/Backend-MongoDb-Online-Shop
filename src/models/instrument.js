@@ -61,8 +61,7 @@ const instrumentSchema = new Schema({
         required: false
     },
     avalibilitySecond: {
-        type: Boolean,
-        default: false
+        type: Boolean
     },
     imgTitle: {
         type: String,
