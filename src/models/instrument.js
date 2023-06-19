@@ -60,7 +60,7 @@ const instrumentSchema = new Schema({
         type: Number,
         required: false
     },
-    availabilitySecond: {
+    avalibilitySecond: {
         type: Boolean,
         required: false
     },
