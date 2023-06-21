@@ -21,10 +21,11 @@ const {
 
     // users
     postUser,
+    updateUsersByNewId,
 
     // Update
     updateInstrumentById,
-    updateUsersById
+    updateUsersById,
 
 } = require('../constrollers/instrument-controller.js')
 const fs = require("fs");
@@ -49,14 +50,15 @@ router.get('/api/users/get/all', getUsers)
 
 // Post
 router.post('/instrument/add', postInstrument)
-
+router.post('/users/update/:newId', updateUsersByNewId)
 // Post user
 router.post('/api/user/add', postUser);
 // Post and Get user
 
 // Patch
 router.patch('/instrument/update/:id', updateInstrumentById)
-// Ptach user
-router.patch('/users/update/:id', updateUsersById)
+router.patch('/users/update/:newId', updateUsersById)
+
+
 
 module.exports = router

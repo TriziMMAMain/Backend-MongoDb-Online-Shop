@@ -126,7 +126,6 @@ const postInstrument = (req, res) => {
 // users
 const postUser = (req, res) => {
     const data = req.body
-    console.log(data);
     const userNew = new User(data)
     userNew
         .save()
@@ -150,19 +149,33 @@ const updateInstrumentById = (req, res) => {
         })
         .catch((err) => handlerError(res, err))
 }
-const updateUsersById = (req, res) => {
+const updateUsersByNewId = (req, res) => {
     const data = req.body
-    console.log(data);
     User
-        .findByIdAndUpdate(req.params.id, data)
+        .findOneAndUpdate(
+        { newId: data.newId },
+        { $push: { instrumentArraySecond: data.instrumentArraySecond } },
+        { new: true }
+    )
         .then((result) => {
-            res
-                .status(200)
-                .json(result)
+            res.status(200).json(result);
         })
         .catch((err) => handlerError(res, err))
 }
-
+const updateUsersById = (req, res) => {
+    const { instrumentArraySecond: { orderId, processing, _id } } = req.body;
+    User
+        .findOneAndUpdate(
+            {newId: req.params.newId, "instrumentArraySecond._id": _id},
+            {$set: {"instrumentArraySecond.$.processing": processing}},
+            {new: true}
+        )
+        .then((result) => {
+            console.log(result);
+            res.status(200).json(result)
+        })
+        .catch((err) => {handlerError(res, err)})
+}
 
 // Exports
 module.exports = {
@@ -186,9 +199,9 @@ module.exports = {
 
     // users
     postUser,
+    updateUsersByNewId,
 
     // Update
     updateInstrumentById,
-    updateUsersById
-
+    updateUsersById,
 }
