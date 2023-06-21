@@ -57,7 +57,7 @@ const instrumentSchema = new Schema({
         required: false
     },
     availability: {
-        type: String,
+        type: Number,
         required: false
     },
     avalibilitySecond: {
