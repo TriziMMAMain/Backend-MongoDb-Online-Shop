@@ -171,11 +171,24 @@ const updateUsersById = (req, res) => {
             {new: true}
         )
         .then((result) => {
-            console.log(result);
             res.status(200).json(result)
         })
         .catch((err) => {handlerError(res, err)})
 }
+const updateUsersByIdAndOrder = (req, res) => {
+    const {orderId, _id} = req.body;
+    User
+        .findOneAndUpdate(
+            { "instrumentArraySecond._id": _id },
+            { $pull: { instrumentArraySecond: { orderId } } },
+            { new: true }
+        )
+        .then((result) => {
+            res.status(200).json(result)
+        })
+        .catch((err) => {handlerError(res, err)})
+}
+
 
 // Exports
 module.exports = {
@@ -204,4 +217,5 @@ module.exports = {
     // Update
     updateInstrumentById,
     updateUsersById,
+    updateUsersByIdAndOrder
 }
