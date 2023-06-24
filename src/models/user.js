@@ -95,6 +95,15 @@ const userSchema = new Schema({
                     },
                     priceOrder: {
                         type: Number
+                    },
+                    equipmentArray: {
+                        type: [String]
+                    },
+                    countryOfOrigin: {
+                        type: String
+                    },
+                    homeOfTheBrand: {
+                        type: String
                     }
                 }],
             },
