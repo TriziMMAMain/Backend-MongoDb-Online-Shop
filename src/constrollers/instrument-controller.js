@@ -80,6 +80,17 @@ const getInstrumentTypePneumotool = (req, res) => {
         })
         .catch((err) => handlerError(res, err))
 }
+const getInstrumentTypeDiesel = (req, res) => {
+    Instrument
+        .find({ type: 'Дизельный инструмент' })
+        .sort({name: 1})
+        .then((instruments) => {
+            res
+                .status(200)
+                .json(instruments)
+        })
+        .catch((err) => handlerError(res, err))
+}
 
 // Get admin-panel
 const getAdminAndPassword = (req, res) => {
@@ -200,6 +211,7 @@ module.exports = {
     getInstrumentTypeGasoline,
     getInstrumentTypeNetwork,
     getInstrumentTypePneumotool,
+    getInstrumentTypeDiesel,
 
     // Get admin-panel
     getAdminAndPassword,

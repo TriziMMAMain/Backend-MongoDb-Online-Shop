@@ -9,6 +9,7 @@ const {
     getInstrumentTypeGasoline,
     getInstrumentTypeNetwork,
     getInstrumentTypePneumotool,
+    getInstrumentTypeDiesel,
 
     // Get admin-panel
     getAdminAndPassword,
@@ -41,6 +42,7 @@ router.get('/api/instruments/get/cordless', getInstrumentTypeCordless)
 router.get('/api/instruments/get/gasoline', getInstrumentTypeGasoline)
 router.get('/api/instruments/get/network', getInstrumentTypeNetwork)
 router.get('/api/instruments/get/pneumo', getInstrumentTypePneumotool)
+router.get('/api/instruments/get/diesel', getInstrumentTypeDiesel)
 router.get('/api/instrument/:id', getInstrumentId)
 
 // Get login and password
